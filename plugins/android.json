@@ -7,8 +7,20 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "io.github.whirish.hshacks"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "io.github.whirish.hshacks"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "io.github.whirish.hshacks"
+        },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
+            "PACKAGE_NAME": "io.github.whirish.hshacks"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "io.github.whirish.hshacks"
         }
     },
     "dependent_plugins": {}
