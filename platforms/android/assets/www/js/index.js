@@ -66,7 +66,7 @@ var app = {
                 }
                 msg = msg + "<a href='javascript:void(0);' class='img-open' id='img-" + getKeyByValue(props, s) + "'>View Image</a>";
                 var symbol;
-                switch (props.type) {
+                switch ((props.type).toLowerCase()) {
                     case 'vandalism':
                         symbol = 'https://image.flaticon.com/icons/png/128/136/136801.png';
                         break;
@@ -96,9 +96,9 @@ var app = {
                         'marker-size': 'large',
                         icon: {
                             iconUrl: symbol,
-                            iconSize: [128, 128], // size of the icon
-                            iconAnchor: [64, 64], // point of the icon which will correspond to marker's location
-                            popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+                            iconSize: [25, 25], // size of the icon
+                            iconAnchor: [12.5, 12.5], // point of the icon which will correspond to marker's location
+                            popupAnchor: [0, 0], // point from which the popup should open relative to the iconAnchor
                             className: 'dot',
                         }
                     }
@@ -109,6 +109,7 @@ var app = {
                   marker.setIcon(L.icon(feature.properties.icon));
                 });
                 myLayer.setGeoJSON(geojson);
+                myLayer.on('popupopen', app.open);
                 //var l = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(map).on('popupopen', app.open);
             }
         });
